@@ -138,3 +138,60 @@ If you use a different directory, update the `COPY` commands in the SQL script a
 1. Open `MetroCycle Analytics.pbix`
 2. Navigate to:
 
+3. Select the existing **PostgreSQL** connection and click **Change Source**
+4. Update the following fields:
+   - **Server:** `localhost`
+   - **Database:** Database name created in Step 2
+5. Click **Close**
+6. Click **Refresh** in the Home ribbon
+
+Power BI will reload the data, recompute all DAX measures, and populate the dashboard visuals.
+
+---
+
+## Insights & Visuals
+
+The dashboard is organized into three strategic analytical views.
+
+---
+
+### 1. Operations Commander Map
+
+**Target Audience:** Fleet Managers  
+
+**Visual:**  
+- Map with conditional formatting
+
+**Indicators:**  
+- Red bubbles: Stations emptying out (Need refill)  
+- Orange bubbles: Stations full (Need pickup)
+
+**Key Insight:**  
+Suburban districts experience strong negative flow during morning rush hours, requiring truck intervention **before 7:00 AM** to prevent service outages.
+
+---
+
+### 2. Strategic Expansion
+
+**Visual:** Scatter Plot (Commuter Score vs Utilization)
+
+**Insight:**  
+Identifies:
+- Cash Cows (high utilization, commuter-heavy stations)
+- Dead Zones (low utilization, weak demand)
+
+**Visual:** Flow Analysis (Origin–Destination pairs)
+
+**Insight:**  
+The **Uptown ↔ Financial District** corridor emerges as the highest-priority candidate for new protected bike lane infrastructure.
+
+---
+
+### 3. Time Series Analysis
+
+**Visual:** Line charts segmented by user type
+
+**Insight:**  
+- Subscribers display a clear **double-hump** demand pattern (8 AM and 6 PM peaks)
+- Casual users exhibit smoother, afternoon-centric demand curves
+
